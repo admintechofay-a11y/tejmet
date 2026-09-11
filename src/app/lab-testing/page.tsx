@@ -189,7 +189,7 @@ export default function LabTestingPage() {
             </div>
 
             <a
-              href="https://wa.me/918780547419?text=Hello%20TEJMET,%20I%20have%20an%20urgent%20testing%20request"
+              href="https://wa.me/919925020729?text=Hello%20TEJMET,%20I%20have%20an%20urgent%20testing%20request"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-amber hover:bg-amber-dark text-white font-bold text-xs transition-colors shrink-0 shadow-md"
@@ -745,7 +745,7 @@ export default function LabTestingPage() {
                 Discuss Custom Testing Scope
               </Link>
               <a
-                href="tel:8780547419"
+                href="tel:+919925020729"
                 className="px-6 py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm rounded-xl transition-colors text-center"
               >
                 Call Engineer Desk

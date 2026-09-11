@@ -318,8 +318,9 @@ export const whyChooseUs = [
 ];
 
 export const CONTACT = {
-  email: 'tejmetconsultancy@gmail.com',
-  phone: '8780547419',
+  email: 'Info.tejmet@gmail.com',
+  phone: '99250 20729',
+  phoneRaw: '9925020729',
 };
 
 export const consultancyDropdownLinks = [

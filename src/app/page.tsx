@@ -92,7 +92,7 @@ export default function HomePage() {
                 </Link>
 
                 <a
-                  href="https://wa.me/918780547419?text=Hello%20TEJMET,%20I%20need%20assistance%20with%20metallurgical%20testing"
+                  href="https://wa.me/919925020729?text=Hello%20TEJMET,%20I%20need%20assistance%20with%20metallurgical%20testing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-3.5 text-emerald-400 hover:text-emerald-300 text-sm font-semibold transition-colors"

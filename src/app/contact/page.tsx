@@ -178,7 +178,7 @@ function ContactContent() {
                 </h2>
                 <div className="flex flex-col gap-3">
                   <a
-                    href={`tel:${CONTACT.phone}`}
+                    href={`tel:+91${CONTACT.phone.replace(/\s+/g, '')}`}
                     className="flex items-center gap-3.5 p-3.5 bg-sky rounded-xl border border-sky-mid hover:border-blue-accent hover:bg-sky-mid/50 transition-all group"
                   >
                     <div className="w-10 h-10 bg-sky-mid rounded-lg flex items-center justify-center shrink-0 group-hover:bg-navy transition-colors">
@@ -208,7 +208,7 @@ function ContactContent() {
                   </a>
 
                   <a
-                    href={`https://wa.me/91${CONTACT.phone}?text=Hello%20TEJMET,%20I%20have%20an%20inquiry%20regarding%20testing`}
+                    href={`https://wa.me/91${CONTACT.phone.replace(/\s+/g, '')}?text=Hello%20TEJMET,%20I%20have%20an%20inquiry%20regarding%20testing`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3.5 p-3.5 bg-emerald-50/80 rounded-xl border border-emerald-200 hover:bg-emerald-100/70 transition-all group"
@@ -310,7 +310,7 @@ function ContactContent() {
                   {/* Multi-channel action buttons */}
                   <div className="flex flex-wrap gap-4 justify-center mb-8">
                     <a
-                      href={`https://wa.me/91${CONTACT.phone}?text=${encodeURIComponent(
+                      href={`https://wa.me/91${CONTACT.phone.replace(/\s+/g, '')}?text=${encodeURIComponent(
                         generateSummaryText()
                       )}`}
                       target="_blank"

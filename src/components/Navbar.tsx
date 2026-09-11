@@ -156,7 +156,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-5 font-medium">
             <a
-              href={`tel:${CONTACT.phone}`}
+              href={`tel:+91${CONTACT.phone.replace(/\s+/g, '')}`}
               className="inline-flex items-center gap-1.5 hover:text-navy transition-colors text-slate-gray"
             >
               <Phone className="w-3 h-3 text-navy" />
@@ -170,7 +170,7 @@ export default function Navbar() {
               {CONTACT.email}
             </a>
             <a
-              href={`https://wa.me/91${CONTACT.phone}?text=Hello%20TEJMET,%20I%20have%20an%20enquiry%20regarding%20testing%20services`}
+              href={`https://wa.me/91${CONTACT.phone.replace(/\s+/g, '')}?text=Hello%20TEJMET,%20I%20have%20an%20enquiry%20regarding%20testing%20services`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-emerald-600/10 text-emerald-700 hover:bg-emerald-600/20 transition-colors border border-emerald-500/30"
@@ -310,7 +310,7 @@ export default function Navbar() {
             {/* Quick contact strip on mobile */}
             <div className="p-3 bg-sky rounded-xl border border-sky-mid flex items-center justify-between text-xs mb-2">
               <a
-                href={`tel:${CONTACT.phone}`}
+                href={`tel:+91${CONTACT.phone.replace(/\s+/g, '')}`}
                 onClick={closeMobileMenu}
                 className="flex items-center gap-1.5 text-navy font-medium"
               >
@@ -318,7 +318,7 @@ export default function Navbar() {
                 +91 {CONTACT.phone}
               </a>
               <a
-                href={`https://wa.me/91${CONTACT.phone}?text=Hello%20TEJMET`}
+                href={`https://wa.me/91${CONTACT.phone.replace(/\s+/g, '')}?text=Hello%20TEJMET`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}

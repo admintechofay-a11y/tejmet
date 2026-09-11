@@ -63,7 +63,7 @@ export default function Footer() {
                 <span>{CONTACT.email}</span>
               </a>
               <a
-                href={`tel:${CONTACT.phone}`}
+                href={`tel:+91${CONTACT.phone.replace(/\s+/g, '')}`}
                 className="flex items-center gap-2.5 text-white/80 hover:text-sky-deep transition-colors"
               >
                 <div className="w-7 h-7 rounded-md bg-white/10 flex items-center justify-center shrink-0">
@@ -72,7 +72,7 @@ export default function Footer() {
                 <span>+91 {CONTACT.phone}</span>
               </a>
               <a
-                href={`https://wa.me/91${CONTACT.phone}?text=Hello%20TEJMET,%20I%20have%20an%20enquiry%20regarding%20testing%20services`}
+                href={`https://wa.me/91${CONTACT.phone.replace(/\s+/g, '')}?text=Hello%20TEJMET,%20I%20have%20an%20enquiry%20regarding%20testing%20services`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 text-emerald-400 hover:text-emerald-300 transition-colors"

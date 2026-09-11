@@ -13,7 +13,7 @@ export default function MobileQuickBar() {
       <div className="max-w-md mx-auto grid grid-cols-3 gap-2">
         {/* Call Engineer */}
         <a
-          href={`tel:${CONTACT.phone}`}
+          href={`tel:+91${CONTACT.phone.replace(/\s+/g, '')}`}
           className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-sky text-navy hover:bg-sky-mid transition-colors text-center border border-sky-mid"
         >
           <Phone className="w-4 h-4 text-navy mb-0.5" />
@@ -22,7 +22,7 @@ export default function MobileQuickBar() {
 
         {/* WhatsApp Desk */}
         <a
-          href={`https://wa.me/91${CONTACT.phone}?text=Hello%20TEJMET,%20I%20have%20an%20urgent%20testing%20inquiry`}
+          href={`https://wa.me/91${CONTACT.phone.replace(/\s+/g, '')}?text=Hello%20TEJMET,%20I%20have%20an%20urgent%20testing%20inquiry`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-emerald-50 text-emerald-800 hover:bg-emerald-100 transition-colors text-center border border-emerald-200"

@@ -298,12 +298,12 @@ export default function AboutPage() {
           </div>
           <p className="text-center text-xs text-steel mt-8">
             Contact our engineering desk at{' '}
-            <a href="mailto:tejmetconsultancy@gmail.com" className="text-navy font-bold underline">
-              tejmetconsultancy@gmail.com
+            <a href="mailto:Info.tejmet@gmail.com" className="text-navy font-bold underline">
+              Info.tejmet@gmail.com
             </a>{' '}
             or call{' '}
-            <a href="tel:8780547419" className="text-navy font-bold underline">
-              +91 8780547419
+            <a href="tel:+919925020729" className="text-navy font-bold underline">
+              +91 99250 20729
             </a>{' '}
             to speak directly with our lead metallurgical specialist.
           </p>
