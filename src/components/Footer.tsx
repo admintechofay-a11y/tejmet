@@ -1,69 +1,104 @@
 import Link from 'next/link';
-import { Mail, Phone, FlaskConical, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { Mail, Phone, ArrowRight, ShieldCheck, MessageSquare, CheckCircle2 } from 'lucide-react';
 import { CONTACT } from '@/lib/data';
 
 const quickLinks = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'Consultancy Services', href: '/consultancy' },
-  { label: 'Lab Testing', href: '/lab-testing' },
-  { label: 'Contact Us', href: '/contact' },
+  { label: 'Lab Testing Catalog', href: '/lab-testing' },
+  { label: 'Request a Quote (RFQ)', href: '/contact' },
 ];
 
 const consultancyLinks = [
-  { label: 'Materials Selection', href: '/consultancy#materials-selection' },
-  { label: 'Failure Analysis', href: '/consultancy#failure-analysis' },
-  { label: 'Corrosion Assessment', href: '/consultancy#corrosion-assessment' },
-  { label: 'Corrosion Mitigation', href: '/consultancy#corrosion-mitigation' },
-  { label: 'Quality Assurance', href: '/consultancy#quality-assurance' },
+  { label: 'Materials Selection & Recommendation', href: '/consultancy#materials-selection' },
+  { label: 'Failure Analysis & Root Cause', href: '/consultancy#failure-analysis' },
+  { label: 'Corrosion Assessment & Diagnostics', href: '/consultancy#corrosion-assessment' },
+  { label: 'Corrosion Mitigation Strategy', href: '/consultancy#corrosion-mitigation' },
+  { label: 'Prevention & Control Planning', href: '/consultancy#prevention-planning' },
+  { label: 'Quality Assurance & Regulatory', href: '/consultancy#quality-assurance' },
+];
+
+const labStandards = [
+  'ASTM G5 Potentiodynamic Polarization',
+  'ASTM G48 Pitting & Crevice Testing',
+  'ASTM F2129 Medical Implant Durability',
+  'ASTM A262 Intergranular Corrosion',
+  'ASTM B117 / G85 Salt Spray Testing',
+  'NACE RP0775 Corrosion Coupon Analysis',
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-dark text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-amber rounded flex items-center justify-center">
-                <FlaskConical className="w-5 h-5 text-white" />
+    <footer className="bg-navy-dark text-white border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+          {/* Brand Col */}
+          <div className="lg:col-span-4">
+            <Link href="/" className="inline-block mb-5 group">
+              <div className="bg-amber px-3 py-2 rounded-xl shadow-md inline-flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
+                <Image
+                  src="/tejmet-logo-white.png"
+                  alt="TEJMET Consultancy Services"
+                  width={140}
+                  height={44}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
-              <span className="font-bold text-white text-lg tracking-tight">TEJMET</span>
             </Link>
-            <p className="text-white/60 text-sm leading-relaxed mb-4">
-              Expert metallurgical and corrosion consultancy services. ASTM & NACE compliant laboratory testing for critical industries.
+            <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-sm">
+              TEJMET Consultancy Services delivers authoritative metallurgical engineering,
+              corrosion mitigation strategies, and ASTM/NACE compliant laboratory testing for
+              critical infrastructure, aerospace, marine, and biomedical applications.
             </p>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2.5 text-sm">
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="flex items-center gap-2 text-sm text-white/70 hover:text-amber-light transition-colors"
+                className="flex items-center gap-2.5 text-white/80 hover:text-sky-deep transition-colors"
               >
-                <Mail className="w-4 h-4 shrink-0" />
-                {CONTACT.email}
+                <div className="w-7 h-7 rounded-md bg-white/10 flex items-center justify-center shrink-0">
+                  <Mail className="w-3.5 h-3.5 text-sky-deep" />
+                </div>
+                <span>{CONTACT.email}</span>
               </a>
               <a
                 href={`tel:${CONTACT.phone}`}
-                className="flex items-center gap-2 text-sm text-white/70 hover:text-amber-light transition-colors"
+                className="flex items-center gap-2.5 text-white/80 hover:text-sky-deep transition-colors"
               >
-                <Phone className="w-4 h-4 shrink-0" />
-                {CONTACT.phone}
+                <div className="w-7 h-7 rounded-md bg-white/10 flex items-center justify-center shrink-0">
+                  <Phone className="w-3.5 h-3.5 text-sky-deep" />
+                </div>
+                <span>+91 {CONTACT.phone}</span>
+              </a>
+              <a
+                href={`https://wa.me/91${CONTACT.phone}?text=Hello%20TEJMET,%20I%20have%20an%20enquiry%20regarding%20testing%20services`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 text-emerald-400 hover:text-emerald-300 transition-colors"
+              >
+                <div className="w-7 h-7 rounded-md bg-emerald-500/20 flex items-center justify-center shrink-0">
+                  <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
+                </div>
+                <span>Direct WhatsApp Consultation</span>
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h3>
-            <ul className="flex flex-col gap-2">
+          <div className="lg:col-span-2">
+            <h3 className="text-xs font-bold text-sky-mid uppercase tracking-widest mb-4">
+              Navigation
+            </h3>
+            <ul className="flex flex-col gap-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 text-sm text-white/60 hover:text-amber-light transition-colors group"
+                    className="flex items-center gap-1.5 text-xs text-white/70 hover:text-sky-deep transition-colors group"
                   >
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -ml-1 transition-opacity" />
-                    {link.label}
+                    <ArrowRight className="w-3.5 h-3.5 text-sky-deep opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                    <span>{link.label}</span>
                   </Link>
                 </li>
               ))}
@@ -71,49 +106,64 @@ export default function Footer() {
           </div>
 
           {/* Consultancy Services */}
-          <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Consultancy</h3>
+          <div className="lg:col-span-3">
+            <h3 className="text-xs font-bold text-sky-mid uppercase tracking-widest mb-4">
+              Consultancy Scope
+            </h3>
             <ul className="flex flex-col gap-2">
               {consultancyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 text-sm text-white/60 hover:text-amber-light transition-colors group"
+                    className="flex items-center gap-1.5 text-xs text-white/70 hover:text-sky-deep transition-colors group"
                   >
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -ml-1 transition-opacity" />
-                    {link.label}
+                    <ArrowRight className="w-3.5 h-3.5 text-sky-deep opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all shrink-0" />
+                    <span className="line-clamp-1">{link.label}</span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* CTA */}
-          <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Get in Touch</h3>
-            <p className="text-sm text-white/60 leading-relaxed mb-4">
-              Have a project or sample you need analyzed? Our engineering team is ready to assist.
-            </p>
+          {/* Testing Standards & CTA */}
+          <div className="lg:col-span-3">
+            <h3 className="text-xs font-bold text-sky-mid uppercase tracking-widest mb-4">
+              Testing Standards
+            </h3>
+            <ul className="flex flex-col gap-1.5 mb-6">
+              {labStandards.map((std) => (
+                <li key={std} className="flex items-center gap-2 text-[11px] text-white/70">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-amber-light shrink-0" />
+                  <span className="font-mono">{std}</span>
+                </li>
+              ))}
+            </ul>
+
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-amber hover:bg-amber-dark text-white text-sm font-semibold rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-amber hover:bg-amber-dark text-white text-xs font-bold rounded-lg transition-colors shadow-lg"
             >
-              Request a Quote
-              <ArrowRight className="w-4 h-4" />
+              <span>Submit RFQ / Sample Request</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-white/40">
+      <div className="border-t border-white/10 bg-black/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
+          <p>
             &copy; {new Date().getFullYear()} TEJMET Consultancy Services. All rights reserved.
           </p>
-          <p className="text-xs text-white/40">
-            tejmetconsultancy@gmail.com &nbsp;|&nbsp; 8780547419
-          </p>
+          <div className="flex items-center gap-4 text-xs">
+            <span className="inline-flex items-center gap-1">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+              Strict Technical Confidentiality (NDA)
+            </span>
+            <span>&bull;</span>
+            <span>ASTM &amp; NACE Protocol Adherence</span>
+          </div>
         </div>
       </div>
     </footer>
