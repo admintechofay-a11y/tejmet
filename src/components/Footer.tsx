@@ -152,11 +152,11 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
-          <p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
+          <p className="text-center md:text-left">
             &copy; {new Date().getFullYear()} TEJMET Consultancy Services. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
             <span className="inline-flex items-center gap-1">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
               Strict Technical Confidentiality (NDA)
@@ -164,6 +164,17 @@ export default function Footer() {
             <span>&bull;</span>
             <span>ASTM &amp; NACE Protocol Adherence</span>
           </div>
+          <p className="text-center md:text-right">
+            Design and developed by{' '}
+            <a
+              href="https://techofay-global-ventures.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-deep hover:text-amber-light font-medium transition-colors underline-offset-4 hover:underline"
+            >
+              Techofay Global Ventures
+            </a>
+          </p>
         </div>
       </div>
     </footer>
